@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Intro from '../Intro/Intro';
 import Header from '../Header/Header';
 import HomeItem from '../HomeItem/HomeItem';
@@ -69,13 +70,13 @@ export default class Home extends React.Component {
 
   showMoreTiles = () => {
     this.setState((prevState) => ({
-      items: prevState.items + 3
+      visible: prevState.visible + 3
     }));
   };
 
   render() {
     const { items, isLoading, errorMsg } = this.state;
-
+    
     return (
       <>
         <Header />
