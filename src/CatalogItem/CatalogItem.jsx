@@ -1,28 +1,34 @@
 import React from 'react';
+import ViewMoreDetailsButton from '../ViewMoreDetailsButton/ViewMoreDetailsButton';
+import { Link } from 'react-router-dom';
 
-export default class CatalogItem extends React.Component {
+class CatalogItem extends React.Component {
+  
   render() {
     return (
       <article className="box catalog-item">
         <div className="content">
           <figure>
-            <img src="https://bulma.io/images/placeholders/480x320.png" alt="catalog item"/>
+            <img src={this.props.data.image} alt="catalog item"/>
           </figure>
           <div className="text catalog-text">
             <h2>{this.props.data.title}</h2>
-            <p>{this.props.data.description}</p>
+            <div>
+              <p>Artist: {this.props.data.artist}</p>
+              <p>Medium: {this.props.data.medium}</p>
+            </div>
           </div>
           <div className="catalog-price">
             <p>Price: </p>
-            <p>$100</p>
+            <p>{this.props.data.price}</p>
           </div>
-          <div className="catalog-btn">
-            <button type="button">
-              View more
-            </button>
-          </div>
+          <Link to={`/catalog/${this.props.data.id}`}>
+            <ViewMoreDetailsButton />
+          </Link>
         </div>
       </article>
     )
   }
 }
+
+export default CatalogItem

@@ -28,7 +28,7 @@ body {
     border-bottom: 2px solid black;
   }
 
-  .container-filterbtn {
+  .container-filter {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -45,7 +45,7 @@ body {
   .container-filterband {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     border-bottom: 2px solid black;
   }
 
@@ -69,6 +69,7 @@ body {
   .searchbar {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
   }
 
   .container-item {
@@ -80,7 +81,7 @@ body {
   .container-shopping {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-bottom: 7vh;
   }
 
@@ -95,8 +96,13 @@ body {
   }
 }
 
-.container-header > figure {
+.container-header > .logo {
   flex: 0.4;
+}
+
+.container-header .logo > p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
 }
 
 .container-header > ul {
@@ -139,6 +145,11 @@ body {
 .container-branding > .branding-box  figure {
   display: flex;
   justify-content: center;
+}
+
+.container-branding > .branding-box  figure p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
 }
 
 .social-container {
@@ -186,10 +197,15 @@ body {
 }
 
 .catalog-item .catalog-text > h2 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+  margin: 1.5vh;
 }
 
-.catalog-item .catalog-price > p:first-child {
+.catalog-item .catalog-text > div {
+  font-size: 1rem;
+}
+
+.catalog-item .catalog-price > p {
   font-weight: 800;
 }
 
@@ -209,16 +225,10 @@ body {
   margin-left: 0;
 }
 
-.container-item > figure {
+.container-item .item-image {
   flex: 1;
-  margin: 5vw;
+  margin: 5vw; 
   margin-bottom: 15vh;
-}
-
-.container-item .item-description {
-  flex: 2;
-  margin: 5vw;
-  margin-left: 0;
 }
 
 .container-item .item-description h1 {
@@ -227,9 +237,10 @@ body {
 }
 
 .container-shopping h2 {
-  flex: 2;
+  flex: 2.5;
   font-size: 1.6rem;
   font-weight: 600;
+  margin-left: 5vh;
 }
 
 .container-shopping .buttons-shopping {

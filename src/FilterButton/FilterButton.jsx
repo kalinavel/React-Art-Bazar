@@ -1,38 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-export default class FilterButton extends React.Component {
-  render() {
+function FilterButton() {
+
     return (
-      <div className="dropdown">
-          <div className="dropdown-trigger">
-              <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                  <span>Filter</span>
-                  <span className="icon is-small">
-                      <i className="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-              </button>
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Filter by Artists</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
           </div>
-          <div className="dropdown-menu" id="dropdown-menu" role="menu">
-              <div className="dropdown-content">
-                  <a href="#" className="dropdown-item">
-                    Dropdown item
-                  </a>
-                  <a className="dropdown-item">
-                    Other dropdown item
-                  </a>
-                  <a href="#" className="dropdown-item">
-                    Active dropdown item
-                  </a>
-                  <a href="#" className="dropdown-item">
-                    Other dropdown item
-                  </a>
-                  <hr className="dropdown-divider"/>
-                  <a href="#" className="dropdown-item">
-                    With a divider
-                  </a>
-              </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">
+                Paul Sandby
+              </a>
+              <a class="dropdown-item">
+                John Warwick Smith
+              </a>
+              <a href="#" class="dropdown-item">
+                Active dropdown item
+              </a>
+              <a href="#" class="dropdown-item">
+                Other dropdown item
+              </a>
+            </div>
           </div>
-      </div>
+        </div>
     )
-  }
 }
+
+export default FilterButton;
