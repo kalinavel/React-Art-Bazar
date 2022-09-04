@@ -15,6 +15,7 @@ export default function ItemDetails() {
     const itemMedium = itemData.medium;
     const itemPrice = itemData.price;
     const itemImage = itemData.image;
+    
     return (
         <>
             <Header />
